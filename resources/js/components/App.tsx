@@ -6,9 +6,9 @@ export interface IUser {
 }
 const App = () => {
     return (
-        <div>
-            <h1>First Time Auto Deploy</h1>
-        </div>
+        <p className="text-red-400 text-[50px]">
+            First Time Auto Deploy
+        </p>
     );
 };
 
