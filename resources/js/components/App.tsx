@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import Footer from "./app/container/Footer";
+import Header from "./app/container/Header";
 
 export interface IUser {
     name: string;
@@ -6,9 +8,10 @@ export interface IUser {
 }
 const App = () => {
     return (
-        <p className="text-red-400 text-[50px]">
-            First Time Auto Deploy
-        </p>
+        <>
+        <Header />
+        <Footer />
+        </>
     );
 };
 
