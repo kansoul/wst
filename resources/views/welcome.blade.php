@@ -12,11 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- css -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root" class="justify-center"></div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

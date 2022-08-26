@@ -2110,25 +2110,8 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 function Footer() {
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("footer", {
-    className: "relative bg-blueGray-200 mt-[600px] pb-6"
+    className: "bg-blueGray-200 w-full lg:max-w-[1240px] m-auto"
   }, react_1["default"].createElement("div", {
-    className: "bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20",
-    style: {
-      transform: "translateZ(0)"
-    }
-  }, react_1["default"].createElement("svg", {
-    className: "absolute bottom-0 overflow-hidden co",
-    xmlns: "http://www.w3.org/2000/svg",
-    preserveAspectRatio: "none",
-    version: "1.1",
-    viewBox: "0 0 2560 100",
-    x: "0",
-    y: "0"
-  }, react_1["default"].createElement("polygon", {
-    fill: "#ebfff0",
-    className: "text-blueGray-200",
-    points: "2560 0 2560 100 0 100"
-  }))), react_1["default"].createElement("div", {
     className: "container mx-auto px-4"
   }, react_1["default"].createElement("div", {
     className: "flex flex-wrap text-center lg:text-left"
@@ -2172,16 +2155,16 @@ function Footer() {
     className: "list-unstyled"
   }, react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/presentation?ref=nr-footer"
+    href: "#"
   }, "About Us")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://blog.creative-tim.com?ref=nr-footer"
+    href: "#"
   }, "Blog")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://www.github.com/creativetimofficial?ref=nr-footer"
+    href: "#"
   }, "Github")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/bootstrap-themes/free?ref=nr-footer"
+    href: "#"
   }, "Free Products")))), react_1["default"].createElement("div", {
     className: "w-full lg:w-4/12 px-4"
   }, react_1["default"].createElement("span", {
@@ -2190,16 +2173,16 @@ function Footer() {
     className: "list-unstyled"
   }, react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://github.com/creativetimofficial/notus-react/blob/main/LICENSE.md?ref=nr-footer"
+    href: "##"
   }, "MIT License")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/terms?ref=nr-footer"
+    href: "#"
   }, "Terms & Conditions")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/privacy?ref=nr-footer"
+    href: "#"
   }, "Privacy Policy")), react_1["default"].createElement("li", null, react_1["default"].createElement("a", {
     className: "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/contact-us?ref=nr-footer"
+    href: "#"
   }, "Contact Us"))))))), react_1["default"].createElement("hr", {
     className: "my-6 border-blueGray-300"
   }), react_1["default"].createElement("div", {
@@ -2208,13 +2191,292 @@ function Footer() {
     className: "w-full md:w-4/12 px-4 mx-auto text-center"
   }, react_1["default"].createElement("div", {
     className: "text-sm text-blueGray-500 font-semibold py-1"
-  }, "Copyright \xA9 ", new Date().getFullYear(), " Notus React by", " ", react_1["default"].createElement("a", {
+  }, "Copyright \xA9 ", new Date().getFullYear(), " Design by", " ", react_1["default"].createElement("a", {
     href: "https://www.creative-tim.com?ref=nr-footer",
     className: "text-blueGray-500 hover:text-blueGray-800"
-  }, "Creative Tim"), "."))))));
+  }, "H\u1ED3 \u0110oan"), "."))))));
 }
 
 exports["default"] = Footer;
+
+/***/ }),
+
+/***/ "./resources/js/components/app/container/Header/components/Navbar/components/FirstMenu/index.tsx":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/components/FirstMenu/index.tsx ***!
+  \*******************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function FirstMenu(props) {
+  var isOpenTop = props.isOpenTop;
+  return react_1["default"].createElement("div", {
+    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible")
+  }, react_1["default"].createElement("div", {
+    className: "flex flex-col w-full rounded-lg absolute left-0 bg-yellow-100"
+  }, react_1["default"].createElement("div", {
+    className: "flex"
+  }, react_1["default"].createElement("div", {
+    className: "w-[30%]"
+  }, react_1["default"].createElement("p", null, "Anh ey")), react_1["default"].createElement("div", {
+    className: "flex flex-col w-[70%] h-[500px]"
+  }, react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1")))));
+}
+
+exports["default"] = FirstMenu;
+
+/***/ }),
+
+/***/ "./resources/js/components/app/container/Header/components/Navbar/components/SecondMenu/index.tsx":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/components/SecondMenu/index.tsx ***!
+  \********************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function SecondMenu(props) {
+  var isOpenSecondMenu = props.isOpenSecondMenu;
+  return react_1["default"].createElement("div", {
+    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenSecondMenu ? "opacity-1 visible duration-300" : "opacity-0 invisible")
+  }, react_1["default"].createElement("div", {
+    className: "flex flex-col w-full rounded-lg absolute left-0 bg-yellow-100"
+  }, react_1["default"].createElement("div", {
+    className: "flex"
+  }, react_1["default"].createElement("div", {
+    className: "w-[30%]"
+  }, react_1["default"].createElement("p", null, "Second Menu")), react_1["default"].createElement("div", {
+    className: "flex flex-col w-[70%] h-[500px]"
+  }, react_1["default"].createElement("p", null, "Second Menu 1"), react_1["default"].createElement("p", null, "Second Menu 1"), react_1["default"].createElement("p", null, "Second Menu 1"), react_1["default"].createElement("p", null, "Second Menu 1"), react_1["default"].createElement("p", null, "Second Menu 1")))));
+}
+
+exports["default"] = SecondMenu;
+
+/***/ }),
+
+/***/ "./resources/js/components/app/container/Header/components/Navbar/index.tsx":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/index.tsx ***!
+  \**********************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var react_2 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var FirstMenu_1 = __importDefault(__webpack_require__(/*! ./components/FirstMenu */ "./resources/js/components/app/container/Header/components/Navbar/components/FirstMenu/index.tsx"));
+
+var SecondMenu_1 = __importDefault(__webpack_require__(/*! ./components/SecondMenu */ "./resources/js/components/app/container/Header/components/Navbar/components/SecondMenu/index.tsx"));
+
+function Navbars() {
+  var _ref = (0, react_1.useState)(false),
+      _ref2 = _slicedToArray(_ref, 2),
+      isMobileScreen = _ref2[0],
+      setMobileScreen = _ref2[1];
+
+  var _ref3 = (0, react_1.useState)(false),
+      _ref4 = _slicedToArray(_ref3, 2),
+      openMenuMobile = _ref4[0],
+      setOpenMenuMobile = _ref4[1];
+
+  var _ref5 = (0, react_1.useState)(false),
+      _ref6 = _slicedToArray(_ref5, 2),
+      isOpenTop = _ref6[0],
+      setOpenTop = _ref6[1];
+
+  var _ref7 = (0, react_1.useState)(false),
+      _ref8 = _slicedToArray(_ref7, 2),
+      isOpenSecondMenu = _ref8[0],
+      setOpenSecondMenu = _ref8[1];
+
+  (0, react_1.useEffect)(function () {
+    window.innerWidth >= 960 ? setMobileScreen(false) : setMobileScreen(true);
+    window.addEventListener("resize", function () {
+      return window.innerWidth >= 960 ? setMobileScreen(false) : setMobileScreen(true);
+    });
+  }, []);
+
+  var _ref9 = (0, react_1.useState)(false),
+      _ref10 = _slicedToArray(_ref9, 2),
+      isVisible = _ref10[0],
+      setIsVisible = _ref10[1];
+
+  var toggleVisibility = function toggleVisibility() {
+    if (window.pageYOffset > 1) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  (0, react_1.useEffect)(function () {
+    window.addEventListener("scroll", toggleVisibility);
+    return function () {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
+  var useComponentVisible = function useComponentVisible(openMenuMobile, setOpenMenuMobile) {
+    var ref = (0, react_1.useRef)(null);
+
+    var handleClickOutside = function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpenMenuMobile(false);
+      }
+    };
+
+    (0, react_1.useEffect)(function () {
+      document.addEventListener("click", handleClickOutside, true);
+      return function () {
+        document.removeEventListener("click", handleClickOutside, true);
+      };
+    }, [openMenuMobile]);
+    return {
+      ref: ref
+    };
+  };
+
+  var _useComponentVisible = useComponentVisible(openMenuMobile, setOpenMenuMobile),
+      ref = _useComponentVisible.ref;
+
+  return react_2["default"].createElement("div", {
+    className: "py-2 px-[20px] lg:py-0 fixed top-0 items-center w-full divide-x-0 border-0 bg-white h-auto ".concat(isVisible ? "shadow-lg" : "shadow-none")
+  }, react_2["default"].createElement("div", {
+    className: "flex flex-row w-full lg:max-w-[1240px] m-auto"
+  }, react_2["default"].createElement("h1", {
+    className: "basis-1/12 bg-red-200 w-[120px]"
+  }, "LOGO"), isMobileScreen === false ? react_2["default"].createElement("div", {
+    className: "basis-11/12 bg-blue-300 flex w-[700px]"
+  }, react_2["default"].createElement("ul", {
+    className: "basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900"
+  }, react_2["default"].createElement("li", {
+    className: "basis-[14%] h-full pt-[20px] cursor-pointer flex",
+    onMouseEnter: function onMouseEnter() {
+      return setOpenTop(true);
+    },
+    onMouseLeave: function onMouseLeave() {
+      return setOpenTop(false);
+    }
+  }, react_2["default"].createElement("p", null, " Test 1"), react_2["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    id: "Layer_1",
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24",
+    className: "w-6 h-6"
+  }, react_2["default"].createElement("path", {
+    d: "M11.973,18c-.704,0-1.378-.301-1.848-.824L1.729,8H22.216l-8.401,9.183c-.464,.517-1.138,.817-1.842,.817Z"
+  })), react_2["default"].createElement(FirstMenu_1["default"], {
+    isOpenTop: isOpenTop
+  })), react_2["default"].createElement("li", {
+    className: "basis-[14%] h-full pt-[20px] cursor-pointer flex",
+    onMouseEnter: function onMouseEnter() {
+      return setOpenSecondMenu(true);
+    },
+    onMouseLeave: function onMouseLeave() {
+      return setOpenSecondMenu(false);
+    }
+  }, react_2["default"].createElement("p", null, " Test 2 "), react_2["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    id: "Layer_1",
+    "data-name": "Layer 1",
+    viewBox: "0 0 24 24",
+    className: "w-6 h-6"
+  }, react_2["default"].createElement("path", {
+    d: "M11.973,18c-.704,0-1.378-.301-1.848-.824L1.729,8H22.216l-8.401,9.183c-.464,.517-1.138,.817-1.842,.817Z"
+  })), react_2["default"].createElement(SecondMenu_1["default"], {
+    isOpenSecondMenu: isOpenSecondMenu
+  })), react_2["default"].createElement("li", null, "Menu3"), react_2["default"].createElement("li", null, "Menu4"), react_2["default"].createElement("li", null, "Menu5"), react_2["default"].createElement("li", null, "Menu6"), react_2["default"].createElement("li", null, "Menu7")), react_2["default"].createElement("button", {
+    className: "btn-blue basis-2/12"
+  }, "Hehe")) : react_2["default"].createElement("div", {
+    className: "basis-11/12 "
+  }, react_2["default"].createElement("button", {
+    className: "absolute right-[30px]",
+    type: "button",
+    onClick: function onClick() {
+      return setOpenMenuMobile(true);
+    }
+  }, openMenuMobile ? react_2["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    className: "h-6 w-6",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    strokeWidth: 2
+  }, react_2["default"].createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M6 18L18 6M6 6l12 12"
+  })) : react_2["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "h-6 w-6",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2
+  }, react_2["default"].createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M4 6h16M4 12h16M4 18h16"
+  }))), react_2["default"].createElement("div", {
+    className: "".concat(openMenuMobile ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]" : "")
+  }, react_2["default"].createElement("div", {
+    ref: ref,
+    className: "absolute top-0 transition-all ease-linear w-[70%] h-screen bg-red-500 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
+  })))));
+}
+
+exports["default"] = Navbars;
 
 /***/ }),
 
@@ -2286,6 +2548,19 @@ Object.defineProperty(exports, "__esModule", ({
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var featuredProducts = ["assets/img/slide/slide1.png", "assets/img/slide/slide2.png"];
+var items = [{
+  id: 0,
+  h1: "SAO KIM BRANDING",
+  h2: "Giải pháp xây dựng thương hiệu toàn diện",
+  h3: "Thấu hiểu bối cảnh doanh nghiệp, đưa ra giải pháp tối ưu, Sao Kim sẵn sàng đồng hành cùng thương hiệu cất cánh.",
+  img: "assets/img/slide/slide1.png"
+}, {
+  id: 1,
+  h1: "SAO KIM BRANDING",
+  h2: "Agency được nhiều khách hàng tin tưởng nhất",
+  h3: "Sao Kim là sự đảm bảo thành công cho dự án của bạn với hơn 8000+ khách hàng tin tưởng.",
+  img: "assets/img/slide/slide2.png"
+}];
 var count = 0;
 var slideInterval;
 
@@ -2322,7 +2597,7 @@ function Slider() {
   };
 
   var handleOnNextClick = function handleOnNextClick() {
-    count = (count + 1) % featuredProducts.length;
+    count = (count + 1) % items.length;
     setCurrentIndex(count);
     slideRef.current.classList.add("fade-anim");
   };
@@ -2335,47 +2610,47 @@ function Slider() {
 
   return react_1["default"].createElement("div", {
     ref: slideRef,
-    className: "w-[100%] select-none"
+    className: "w-[100%] max-w-[1370px] m-auto select-none h-auto mt-[80px]"
   }, react_1["default"].createElement("section", {
-    className: "pt-16 w-[100%] flex h-auto md:h-[460px] max-h-[860px] mt-[50px]"
+    className: "pt-16 flex items-center justify-center h-auto md:h-[460px] max-h-[860px]"
   }, react_1["default"].createElement("div", {
     className: "w-full md:w-[40%] items-center mx-[10px]"
   }, react_1["default"].createElement("div", {
     className: "w-full"
-  }, react_1["default"].createElement("h2", {
+  }, react_1["default"].createElement("h1", null, items[currentIndex]["h1"]), react_1["default"].createElement("h2", {
     className: "font-semibold text-4xl text-blueGray-600 text-center sm:text-left"
-  }, "Notus React - A beautiful extension for Tailwind CSS."), react_1["default"].createElement("img", {
-    src: featuredProducts[currentIndex],
+  }, items[currentIndex]["h2"]), react_1["default"].createElement("img", {
+    src: items[currentIndex]["img"],
     alt: "",
     className: "w-[100%] max-h-[20%] px-[10%] md:w-0"
   }), react_1["default"].createElement("p", {
     className: "mt-4 text-lg leading-relaxed text-blueGray-500 text-center sm:text-left"
-  }, "Notus React is Free and Open Source. It does not change any of the CSS from", " ", react_1["default"].createElement("a", {
-    href: "https://tailwindcss.com/?ref=creativetim",
+  }, items[currentIndex]["h3"], " ", react_1["default"].createElement("a", {
+    href: "#",
     className: "text-blueGray-600",
     target: "_blank"
   }, "Tailwind CSS"), ". It features multiple HTML elements and it comes with dynamic components for ReactJS, Vue and Angular."), react_1["default"].createElement("div", {
     className: "mt-12 flex justify-center"
   }, react_1["default"].createElement("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index",
+    href: "#",
     target: "_blank",
     className: "get-started text-black font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
   }, "Get started"), react_1["default"].createElement("a", {
-    href: "https://github.com/creativetimofficial/notus-react?ref=nr-index",
+    href: "#",
     className: "github-star ml-1 text-black font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
     target: "_blank"
   }, "Github Star")))), react_1["default"].createElement("img", {
-    src: featuredProducts[currentIndex],
+    src: items[currentIndex]["img"],
     alt: "",
-    className: "w-0 md:w-[40%] md:max-h-[80%] md:mx-[10%]"
+    className: "w-0 md:w-[50%] md:max-h-[100%]"
   })), react_1["default"].createElement("div", {
-    className: "flex items-center justify-center mt-[10px] invisible md:visible"
-  }, featuredProducts.map(function (productsLength, index) {
+    className: "flex items-center justify-center mt-[10px]"
+  }, items.map(function (item) {
     return react_1["default"].createElement("button", {
-      key: index,
-      className: "w-[15px] h-[15px] border rounded-full mx-[8px] ".concat(index === count ? "bg-green-200" : ""),
+      key: item.id,
+      className: "w-[15px] h-[15px] border rounded-full mx-[8px] ".concat(item.id === count ? "bg-green-200" : ""),
       onClick: function onClick() {
-        return handleOnClick(index);
+        return handleOnClick(item.id);
       }
     });
   })));
@@ -2403,29 +2678,15 @@ var __importDefault = this && this.__importDefault || function (mod) {
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-/*eslint-disable*/
 
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Navbar_1 = __importDefault(__webpack_require__(/*! ./components/Navbar */ "./resources/js/components/app/container/Header/components/Navbar/index.tsx"));
 
 var Slide_1 = __importDefault(__webpack_require__(/*! ./components/Slide */ "./resources/js/components/app/container/Header/components/Slide/index.tsx"));
 
 function Header() {
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
-    className: "flex"
-  }, react_1["default"].createElement("h1", {
-    className: "peer w-[200px] bg-green-600 hover:bg-green-700 text-white pointer-events-auto"
-  }, "Dropdown"), react_1["default"].createElement("div", {
-    className: "hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg absolute transition-all duration-500"
-  }, react_1["default"].createElement("a", {
-    className: "px-5 py-3 hover:bg-gray-200",
-    href: "#"
-  }, "About Us"), react_1["default"].createElement("a", {
-    className: "px-5 py-3 hover:bg-gray-200",
-    href: "#"
-  }, "Contact Us"), react_1["default"].createElement("a", {
-    className: "px-5 py-3 hover:bg-gray-200",
-    href: "#"
-  }, "Privacy Policy"))), react_1["default"].createElement(Slide_1["default"], null));
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(Navbar_1["default"], null), react_1["default"].createElement(Slide_1["default"], null));
 }
 
 exports["default"] = Header;
