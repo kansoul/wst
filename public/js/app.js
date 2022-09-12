@@ -2210,20 +2210,122 @@ exports["default"] = Footer;
 "use strict";
 
 
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  var desc = Object.getOwnPropertyDescriptor(m, k);
+
+  if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    desc = {
+      enumerable: true,
+      get: function get() {
+        return m[k];
+      }
+    };
+  }
+
+  Object.defineProperty(o, k2, desc);
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
 };
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 function FirstMenu(props) {
   var isOpenTop = props.isOpenTop;
+
+  var _ref = (0, react_1.useState)(0),
+      _ref2 = _slicedToArray(_ref, 2),
+      indexMenu = _ref2[0],
+      setIndexMenu = _ref2[1];
+
+  var FirstMenuTitle = ["Tư vấn thương hiệu", "Thiết kế thương hiệu", "Nhận diện thương hiệu số", "Ấn phẩm marketing", "Thiết kế bao bì nhãn mác", "Bản quyền, giấy phép"];
+  var FirstMenuDesc = [[{
+    title: "agagagagagagaga"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }], [{
+    title: "ngungunugnugungunugn"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }], [{
+    title: "333333333333333333"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }], [{
+    title: "4444444444444444"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }], [{
+    title: "555555555555555555555555"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }], [{
+    title: "666666666666666666666666"
+  }, {
+    title: "Hihi"
+  }, {
+    title: "hoho"
+  }, {
+    title: "heheheh"
+  }]];
   return react_1["default"].createElement("div", {
     className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible")
   }, react_1["default"].createElement("div", {
@@ -2231,10 +2333,21 @@ function FirstMenu(props) {
   }, react_1["default"].createElement("div", {
     className: "flex"
   }, react_1["default"].createElement("div", {
-    className: "w-[30%]"
-  }, react_1["default"].createElement("p", null, "Anh ey")), react_1["default"].createElement("div", {
-    className: "flex flex-col w-[70%] h-[500px]"
-  }, react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1"), react_1["default"].createElement("p", null, "test 1")))));
+    className: "block w-[40%] py-8"
+  }, FirstMenuTitle.map(function (menuTitle, i) {
+    return react_1["default"].createElement("div", {
+      className: "w-full py-4 px-[45px] text-xl bg-gray-100 hover:bg-orange-200\r\n                            \r\n                            ",
+      onMouseEnter: function onMouseEnter() {
+        return setIndexMenu(i);
+      }
+    }, react_1["default"].createElement("p", null, menuTitle));
+  })), react_1["default"].createElement("div", {
+    className: "flex flex-col w-[60%] h-[500px]"
+  }, FirstMenuDesc[indexMenu].map(function (menuDesc) {
+    return react_1["default"].createElement("div", null, react_1["default"].createElement("a", {
+      href: ""
+    }, menuDesc.title));
+  })))));
 }
 
 exports["default"] = FirstMenu;
@@ -2302,6 +2415,46 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  var desc = Object.getOwnPropertyDescriptor(m, k);
+
+  if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    desc = {
+      enumerable: true,
+      get: function get() {
+        return m[k];
+      }
+    };
+  }
+
+  Object.defineProperty(o, k2, desc);
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
@@ -2312,9 +2465,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var react_2 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var FirstMenu_1 = __importDefault(__webpack_require__(/*! ./components/FirstMenu */ "./resources/js/components/app/container/Header/components/Navbar/components/FirstMenu/index.tsx"));
 
@@ -2391,17 +2542,17 @@ function Navbars() {
   var _useComponentVisible = useComponentVisible(openMenuMobile, setOpenMenuMobile),
       ref = _useComponentVisible.ref;
 
-  return react_2["default"].createElement("div", {
+  return react_1["default"].createElement("div", {
     className: "py-2 px-[20px] lg:py-0 fixed top-0 items-center w-full divide-x-0 border-0 bg-white h-auto ".concat(isVisible ? "shadow-lg" : "shadow-none")
-  }, react_2["default"].createElement("div", {
+  }, react_1["default"].createElement("div", {
     className: "flex flex-row w-full lg:max-w-[1240px] m-auto"
-  }, react_2["default"].createElement("h1", {
+  }, react_1["default"].createElement("h1", {
     className: "basis-1/12 bg-red-200 w-[120px]"
-  }, "LOGO"), isMobileScreen === false ? react_2["default"].createElement("div", {
+  }, "LOGO"), isMobileScreen === false ? react_1["default"].createElement("div", {
     className: "basis-11/12 bg-blue-300 flex w-[700px]"
-  }, react_2["default"].createElement("ul", {
+  }, react_1["default"].createElement("ul", {
     className: "basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900"
-  }, react_2["default"].createElement("li", {
+  }, react_1["default"].createElement("li", {
     className: "basis-[14%] h-full pt-[20px] cursor-pointer flex",
     onMouseEnter: function onMouseEnter() {
       return setOpenTop(true);
@@ -2409,17 +2560,17 @@ function Navbars() {
     onMouseLeave: function onMouseLeave() {
       return setOpenTop(false);
     }
-  }, react_2["default"].createElement("p", null, " Test 1"), react_2["default"].createElement("svg", {
+  }, react_1["default"].createElement("p", null, " Test 1"), react_1["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     id: "Layer_1",
     "data-name": "Layer 1",
     viewBox: "0 0 24 24",
     className: "w-6 h-6"
-  }, react_2["default"].createElement("path", {
+  }, react_1["default"].createElement("path", {
     d: "M11.973,18c-.704,0-1.378-.301-1.848-.824L1.729,8H22.216l-8.401,9.183c-.464,.517-1.138,.817-1.842,.817Z"
-  })), react_2["default"].createElement(FirstMenu_1["default"], {
+  })), react_1["default"].createElement(FirstMenu_1["default"], {
     isOpenTop: isOpenTop
-  })), react_2["default"].createElement("li", {
+  })), react_1["default"].createElement("li", {
     className: "basis-[14%] h-full pt-[20px] cursor-pointer flex",
     onMouseEnter: function onMouseEnter() {
       return setOpenSecondMenu(true);
@@ -2427,50 +2578,50 @@ function Navbars() {
     onMouseLeave: function onMouseLeave() {
       return setOpenSecondMenu(false);
     }
-  }, react_2["default"].createElement("p", null, " Test 2 "), react_2["default"].createElement("svg", {
+  }, react_1["default"].createElement("p", null, " Test 2 "), react_1["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     id: "Layer_1",
     "data-name": "Layer 1",
     viewBox: "0 0 24 24",
     className: "w-6 h-6"
-  }, react_2["default"].createElement("path", {
+  }, react_1["default"].createElement("path", {
     d: "M11.973,18c-.704,0-1.378-.301-1.848-.824L1.729,8H22.216l-8.401,9.183c-.464,.517-1.138,.817-1.842,.817Z"
-  })), react_2["default"].createElement(SecondMenu_1["default"], {
+  })), react_1["default"].createElement(SecondMenu_1["default"], {
     isOpenSecondMenu: isOpenSecondMenu
-  })), react_2["default"].createElement("li", null, "Menu3"), react_2["default"].createElement("li", null, "Menu4"), react_2["default"].createElement("li", null, "Menu5"), react_2["default"].createElement("li", null, "Menu6"), react_2["default"].createElement("li", null, "Menu7")), react_2["default"].createElement("button", {
+  })), react_1["default"].createElement("li", null, "Menu3"), react_1["default"].createElement("li", null, "Menu4"), react_1["default"].createElement("li", null, "Menu5"), react_1["default"].createElement("li", null, "Menu6"), react_1["default"].createElement("li", null, "Menu7")), react_1["default"].createElement("button", {
     className: "btn-blue basis-2/12"
-  }, "Hehe")) : react_2["default"].createElement("div", {
+  }, "Hehe")) : react_1["default"].createElement("div", {
     className: "basis-11/12 "
-  }, react_2["default"].createElement("button", {
+  }, react_1["default"].createElement("button", {
     className: "absolute right-[30px]",
     type: "button",
     onClick: function onClick() {
       return setOpenMenuMobile(true);
     }
-  }, openMenuMobile ? react_2["default"].createElement("svg", {
+  }, openMenuMobile ? react_1["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     fill: "none",
     className: "h-6 w-6",
     viewBox: "0 0 24 24",
     stroke: "currentColor",
     strokeWidth: 2
-  }, react_2["default"].createElement("path", {
+  }, react_1["default"].createElement("path", {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M6 18L18 6M6 6l12 12"
-  })) : react_2["default"].createElement("svg", {
+  })) : react_1["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     className: "h-6 w-6",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: 2
-  }, react_2["default"].createElement("path", {
+  }, react_1["default"].createElement("path", {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M4 6h16M4 12h16M4 18h16"
-  }))), react_2["default"].createElement("div", {
+  }))), react_1["default"].createElement("div", {
     className: "".concat(openMenuMobile ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]" : "")
-  }, react_2["default"].createElement("div", {
+  }, react_1["default"].createElement("div", {
     ref: ref,
     className: "absolute top-0 transition-all ease-linear w-[70%] h-screen bg-red-500 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
   })))));

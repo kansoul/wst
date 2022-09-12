@@ -1,8 +1,6 @@
-import { useState, useEffect, useRef } from "react";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FirstMenu from "./components/FirstMenu";
 import SecondMenu from "./components/SecondMenu";
-import MenuMobile from "./components/MenuMobile";
 
 export default function Navbars() {
     const [isMobileScreen, setMobileScreen] = useState(false);
@@ -32,7 +30,6 @@ export default function Navbars() {
 
     useEffect(() => {
         window.addEventListener("scroll", toggleVisibility);
-
         return () => {
             window.removeEventListener("scroll", toggleVisibility);
         };
