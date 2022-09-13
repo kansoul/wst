@@ -85,8 +85,12 @@ export default function MenuMobile() {
                             </div>
                         </div>
                         <ul>
-                            {firstMenuTitle.map((menuTitle, i) => (
-                                <NavList key={i} menuTitle={menuTitle} i={i} />
+                            {firstMenuTitle.map((menuTitle, titleIndex) => (
+                                <NavList
+                                    key={titleIndex}
+                                    menuTitle={menuTitle}
+                                    titleIndex={titleIndex}
+                                />
                             ))}
                         </ul>
 

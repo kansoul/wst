@@ -2391,7 +2391,7 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 var navData_1 = __webpack_require__(/*! ../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
 
 var NavList = function NavList(props) {
-  var i = props.i,
+  var titleIndex = props.titleIndex,
       menuTitle = props.menuTitle;
 
   var _ref = (0, react_1.useState)(false),
@@ -2404,10 +2404,10 @@ var NavList = function NavList(props) {
       indexChild = _ref4[0],
       setIndexChild = _ref4[1];
 
-  var handleVisibleChild = function handleVisibleChild(event, i) {
+  var handleVisibleChild = function handleVisibleChild(event) {
     event.preventDefault();
     setVisibleChild(!isVisibleChild);
-    setIndexChild(i);
+    setIndexChild(titleIndex);
   };
 
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
@@ -2418,20 +2418,19 @@ var NavList = function NavList(props) {
     className: "flex justify-between"
   }, menuTitle, react_1["default"].createElement("button", {
     onClick: function onClick(e) {
-      return handleVisibleChild(e, i);
+      return handleVisibleChild(e);
     },
     className: "bg-red-400 px-2"
   }, "+")))), react_1["default"].createElement("div", {
     className: "transition-all ease-linear ".concat(isVisibleChild ? "opacity-1 visible" : "opacity-0 invisible")
-  }, isVisibleChild && indexChild === i ? navData_1.firstMenuDesc[indexChild].map(function (menuDesc, i) {
+  }, isVisibleChild && indexChild === titleIndex && navData_1.firstMenuDesc[indexChild].map(function (menuDesc, indexMenuDesc) {
     return react_1["default"].createElement("div", {
       className: "px-10 py-3 hover:bg-gray-600 cursor-pointer ",
-      key: i
+      key: indexMenuDesc
     }, react_1["default"].createElement("li", {
-      className: "",
-      key: i
+      className: ""
     }, menuDesc.title));
-  }) : ""));
+  })));
 };
 
 exports["default"] = NavList;
@@ -2589,11 +2588,11 @@ function MenuMobile() {
     onClick: function onClick() {
       return setOpenMenuMobile(false);
     }
-  }, "X")), react_1["default"].createElement("ul", null, navData_1.firstMenuTitle.map(function (menuTitle, i) {
+  }, "X")), react_1["default"].createElement("ul", null, navData_1.firstMenuTitle.map(function (menuTitle, titleIndex) {
     return react_1["default"].createElement(NavList_1["default"], {
-      key: i,
+      key: titleIndex,
       menuTitle: menuTitle,
-      i: i
+      titleIndex: titleIndex
     });
   })), react_1["default"].createElement("div", {
     className: "text-center"

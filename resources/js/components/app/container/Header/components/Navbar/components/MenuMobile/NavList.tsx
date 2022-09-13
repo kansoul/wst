@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { firstMenuDesc } from "../../navData";
-
-const NavList = (props: any) => {
-    const { i, menuTitle } = props;
+interface NavListProps {
+    key: number;
+    menuTitle: string;
+    titleIndex: number;
+}
+const NavList = (props: NavListProps) => {
+    const { titleIndex, menuTitle } = props;
     const [isVisibleChild, setVisibleChild] = useState(false);
     const [indexChild, setIndexChild] = useState<number>(0);
-    const handleVisibleChild = (event: any, i: number) => {
+    const handleVisibleChild = (event: any) => {
         event.preventDefault();
         setVisibleChild(!isVisibleChild);
-        setIndexChild(i);
+        setIndexChild(titleIndex);
     };
     return (
         <>
@@ -17,7 +21,7 @@ const NavList = (props: any) => {
                     <li className="flex justify-between">
                         {menuTitle}
                         <button
-                            onClick={(e) => handleVisibleChild(e, i)}
+                            onClick={(e) => handleVisibleChild(e)}
                             className="bg-red-400 px-2"
                         >
                             +
@@ -30,18 +34,18 @@ const NavList = (props: any) => {
                     isVisibleChild ? "opacity-1 visible" : "opacity-0 invisible"
                 }`}
             >
-                {isVisibleChild && indexChild === i
-                    ? firstMenuDesc[indexChild].map((menuDesc, i): any => (
-                          <div
-                              className="px-10 py-3 hover:bg-gray-600 cursor-pointer "
-                              key={i}
-                          >
-                              <li className="" key={i}>
-                                  {menuDesc.title}
-                              </li>
-                          </div>
-                      ))
-                    : ""}
+                {isVisibleChild &&
+                    indexChild === titleIndex &&
+                    firstMenuDesc[indexChild].map(
+                        (menuDesc, indexMenuDesc): any => (
+                            <div
+                                className="px-10 py-3 hover:bg-gray-600 cursor-pointer "
+                                key={indexMenuDesc}
+                            >
+                                <li className="">{menuDesc.title}</li>
+                            </div>
+                        )
+                    )}
             </div>
         </>
     );
