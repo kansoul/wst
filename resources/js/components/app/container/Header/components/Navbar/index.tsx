@@ -44,7 +44,7 @@ export default function Navbars() {
                 <h1 className="basis-1/12 bg-red-200 w-[120px]">LOGO</h1>
                 {isMobileScreen === false ? (
                     <div className="basis-11/12 bg-blue-300 flex w-[700px]">
-                        <ul className="basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900">
+                        <ul className="basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-row items-center gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900">
                             <li
                                 className="basis-[14%] h-full pt-[20px] cursor-pointer flex"
                                 onMouseEnter={() => setOpenTop(true)}
