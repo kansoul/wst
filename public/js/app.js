@@ -2321,10 +2321,182 @@ exports["default"] = FirstMenu;
 
 /***/ }),
 
-/***/ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx ***!
-  \**********************************************************************************************************/
+/***/ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx ***!
+  \********************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  var desc = Object.getOwnPropertyDescriptor(m, k);
+
+  if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    desc = {
+      enumerable: true,
+      get: function get() {
+        return m[k];
+      }
+    };
+  }
+
+  Object.defineProperty(o, k2, desc);
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var navData_1 = __webpack_require__(/*! ../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
+
+var NavList_1 = __importDefault(__webpack_require__(/*! ../NavList */ "./resources/js/components/app/container/Header/components/Navbar/components/NavList/index.tsx"));
+
+function MenuMobile() {
+  var _ref = (0, react_1.useState)(false),
+      _ref2 = _slicedToArray(_ref, 2),
+      openMenuMobile = _ref2[0],
+      setOpenMenuMobile = _ref2[1];
+
+  var useComponentVisible = function useComponentVisible(openMenuMobile, setOpenMenuMobile) {
+    var ref = (0, react_1.useRef)(null);
+
+    var handleClickOutside = function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpenMenuMobile(false);
+      }
+    };
+
+    (0, react_1.useEffect)(function () {
+      document.addEventListener("click", handleClickOutside, true);
+      return function () {
+        document.removeEventListener("click", handleClickOutside, true);
+      };
+    }, [openMenuMobile]);
+    return {
+      ref: ref
+    };
+  };
+
+  var _useComponentVisible = useComponentVisible(openMenuMobile, setOpenMenuMobile),
+      ref = _useComponentVisible.ref;
+
+  return react_1["default"].createElement("div", {
+    className: "basis-11/12 "
+  }, react_1["default"].createElement("button", {
+    className: "absolute right-[30px]",
+    type: "button",
+    onClick: function onClick() {
+      return setOpenMenuMobile(true);
+    }
+  }, openMenuMobile ? react_1["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    className: "h-6 w-6",
+    viewBox: "0 0 24 24",
+    stroke: "currentColor",
+    strokeWidth: 2
+  }, react_1["default"].createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M6 18L18 6M6 6l12 12"
+  })) : react_1["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "h-6 w-6",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 2
+  }, react_1["default"].createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M4 6h16M4 12h16M4 18h16"
+  }))), react_1["default"].createElement("div", {
+    className: "".concat(openMenuMobile ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]" : "")
+  }, react_1["default"].createElement("div", {
+    ref: ref,
+    className: "absolute top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
+  }, react_1["default"].createElement("div", {
+    className: "w-full"
+  }, react_1["default"].createElement("div", {
+    className: "bg-gray-500 h-10 flex items-center justify-between "
+  }, react_1["default"].createElement("div", {
+    className: "flex items-center"
+  }, "LOGO"), react_1["default"].createElement("div", {
+    className: "mr-10 cursor-pointer flex items-center ",
+    onClick: function onClick() {
+      return setOpenMenuMobile(false);
+    }
+  }, "X")), react_1["default"].createElement("ul", null, navData_1.firstMenuTitle.map(function (menuTitle, titleIndex) {
+    return react_1["default"].createElement(NavList_1["default"], {
+      key: titleIndex,
+      menuTitle: menuTitle,
+      titleIndex: titleIndex
+    });
+  })), react_1["default"].createElement("div", {
+    className: "text-center"
+  }, react_1["default"].createElement("button", {
+    className: "bg-orange-400 w-3/5 rounded-md py-2 m-4 text-white"
+  }, "Contact")), react_1["default"].createElement("div", {
+    className: "flex w-full"
+  }, react_1["default"].createElement("div", {
+    className: "w-10  bg-red-200  mx-5"
+  }), react_1["default"].createElement("div", null, react_1["default"].createElement("h2", null, "Hotline:"), react_1["default"].createElement("p", null, "12345667")))))));
+}
+
+exports["default"] = MenuMobile;
+
+/***/ }),
+
+/***/ "./resources/js/components/app/container/Header/components/Navbar/components/NavList/index.tsx":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/components/NavList/index.tsx ***!
+  \*****************************************************************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -2434,178 +2606,6 @@ var NavList = function NavList(props) {
 };
 
 exports["default"] = NavList;
-
-/***/ }),
-
-/***/ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx ***!
-  \********************************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  var desc = Object.getOwnPropertyDescriptor(m, k);
-
-  if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-    desc = {
-      enumerable: true,
-      get: function get() {
-        return m[k];
-      }
-    };
-  }
-
-  Object.defineProperty(o, k2, desc);
-} : function (o, m, k, k2) {
-  if (k2 === undefined) k2 = k;
-  o[k2] = m[k];
-});
-
-var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
-  Object.defineProperty(o, "default", {
-    enumerable: true,
-    value: v
-  });
-} : function (o, v) {
-  o["default"] = v;
-});
-
-var __importStar = this && this.__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-  }
-
-  __setModuleDefault(result, mod);
-
-  return result;
-};
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-
-var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var navData_1 = __webpack_require__(/*! ../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
-
-var NavList_1 = __importDefault(__webpack_require__(/*! ./NavList */ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx"));
-
-function MenuMobile() {
-  var _ref = (0, react_1.useState)(false),
-      _ref2 = _slicedToArray(_ref, 2),
-      openMenuMobile = _ref2[0],
-      setOpenMenuMobile = _ref2[1];
-
-  var useComponentVisible = function useComponentVisible(openMenuMobile, setOpenMenuMobile) {
-    var ref = (0, react_1.useRef)(null);
-
-    var handleClickOutside = function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setOpenMenuMobile(false);
-      }
-    };
-
-    (0, react_1.useEffect)(function () {
-      document.addEventListener("click", handleClickOutside, true);
-      return function () {
-        document.removeEventListener("click", handleClickOutside, true);
-      };
-    }, [openMenuMobile]);
-    return {
-      ref: ref
-    };
-  };
-
-  var _useComponentVisible = useComponentVisible(openMenuMobile, setOpenMenuMobile),
-      ref = _useComponentVisible.ref;
-
-  return react_1["default"].createElement("div", {
-    className: "basis-11/12 "
-  }, react_1["default"].createElement("button", {
-    className: "absolute right-[30px]",
-    type: "button",
-    onClick: function onClick() {
-      return setOpenMenuMobile(true);
-    }
-  }, openMenuMobile ? react_1["default"].createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    fill: "none",
-    className: "h-6 w-6",
-    viewBox: "0 0 24 24",
-    stroke: "currentColor",
-    strokeWidth: 2
-  }, react_1["default"].createElement("path", {
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M6 18L18 6M6 6l12 12"
-  })) : react_1["default"].createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    className: "h-6 w-6",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 2
-  }, react_1["default"].createElement("path", {
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    d: "M4 6h16M4 12h16M4 18h16"
-  }))), react_1["default"].createElement("div", {
-    className: "".concat(openMenuMobile ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]" : "")
-  }, react_1["default"].createElement("div", {
-    ref: ref,
-    className: "absolute top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
-  }, react_1["default"].createElement("div", {
-    className: "w-full"
-  }, react_1["default"].createElement("div", {
-    className: "bg-gray-500 h-10 flex items-center justify-between "
-  }, react_1["default"].createElement("div", {
-    className: "flex items-center"
-  }, "LOGO"), react_1["default"].createElement("div", {
-    className: "mr-10 cursor-pointer flex items-center ",
-    onClick: function onClick() {
-      return setOpenMenuMobile(false);
-    }
-  }, "X")), react_1["default"].createElement("ul", null, navData_1.firstMenuTitle.map(function (menuTitle, titleIndex) {
-    return react_1["default"].createElement(NavList_1["default"], {
-      key: titleIndex,
-      menuTitle: menuTitle,
-      titleIndex: titleIndex
-    });
-  })), react_1["default"].createElement("div", {
-    className: "text-center"
-  }, react_1["default"].createElement("button", {
-    className: "bg-orange-400 w-3/5 rounded-md py-2 m-4 text-white"
-  }, "Contact")), react_1["default"].createElement("div", {
-    className: "flex w-full"
-  }, react_1["default"].createElement("div", {
-    className: "w-10  bg-red-200  mx-5"
-  }), react_1["default"].createElement("div", null, react_1["default"].createElement("h2", null, "Hotline:"), react_1["default"].createElement("p", null, "12345667")))))));
-}
-
-exports["default"] = MenuMobile;
 
 /***/ }),
 

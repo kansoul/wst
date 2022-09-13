@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { firstMenuTitle } from "../../navData";
-import NavList from "./NavList";
+import NavList from "../NavList";
 export default function MenuMobile() {
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
     const useComponentVisible = (
