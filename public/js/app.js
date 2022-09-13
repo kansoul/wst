@@ -2321,6 +2321,63 @@ exports["default"] = FirstMenu;
 
 /***/ }),
 
+/***/ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx ***!
+  \**********************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var navData_1 = __webpack_require__(/*! ../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
+
+var NavList = function NavList(props) {
+  var i = props.i,
+      menuTitle = props.menuTitle,
+      handleVisibleChild = props.handleVisibleChild,
+      indexChild = props.indexChild,
+      isVisibleChild = props.isVisibleChild;
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
+    className: "px-5 py-4 hover:bg-gray-600 cursor-pointer"
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, react_1["default"].createElement("li", {
+    className: "flex justify-between"
+  }, menuTitle, react_1["default"].createElement("button", {
+    onClick: function onClick(e) {
+      return handleVisibleChild(e, i);
+    },
+    className: "bg-red-400 px-2"
+  }, "+")))), react_1["default"].createElement("div", {
+    className: "transition-all ease-linear ".concat(isVisibleChild ? "opacity-1 visible" : "opacity-0 invisible")
+  }, isVisibleChild && indexChild === i ? navData_1.firstMenuDesc[indexChild].map(function (menuDesc, i) {
+    return react_1["default"].createElement("div", {
+      className: "px-10 py-3 hover:bg-gray-600 cursor-pointer ",
+      key: i
+    }, react_1["default"].createElement("li", {
+      className: "",
+      key: i
+    }, menuDesc.title));
+  }) : ""));
+};
+
+exports["default"] = NavList;
+
+/***/ }),
+
 /***/ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx":
 /*!********************************************************************************************************!*\
   !*** ./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/index.tsx ***!
@@ -2382,6 +2439,12 @@ var __importStar = this && this.__importStar || function (mod) {
   return result;
 };
 
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
@@ -2389,6 +2452,8 @@ Object.defineProperty(exports, "__esModule", ({
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var navData_1 = __webpack_require__(/*! ../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
+
+var NavList_1 = __importDefault(__webpack_require__(/*! ./NavList */ "./resources/js/components/app/container/Header/components/Navbar/components/MenuMobile/NavList.tsx"));
 
 function MenuMobile() {
   var _ref = (0, react_1.useState)(false),
@@ -2482,28 +2547,15 @@ function MenuMobile() {
       return setOpenMenuMobile(false);
     }
   }, "X")), react_1["default"].createElement("ul", null, navData_1.firstMenuTitle.map(function (menuTitle, i) {
-    return react_1["default"].createElement("div", {
-      className: "px-5 py-4 hover:bg-gray-600 cursor-pointer",
-      key: i
-    }, react_1["default"].createElement("a", {
-      href: ""
-    }, react_1["default"].createElement("li", {
-      className: "flex justify-between"
-    }, menuTitle, react_1["default"].createElement("button", {
-      onClick: function onClick(e) {
-        return handleVisibleChild(e, i);
-      },
-      className: "bg-red-400 px-2"
-    }, "+"))));
-  }), isVisibleChild ? navData_1.firstMenuDesc[indexChild].map(function (menuDesc, i) {
-    return react_1["default"].createElement("div", {
-      className: "px-10 py-3 hover:bg-gray-600 cursor-pointer",
-      key: i
-    }, react_1["default"].createElement("li", {
-      className: "",
-      key: i
-    }, menuDesc.title));
-  }) : ""), react_1["default"].createElement("div", {
+    return react_1["default"].createElement(NavList_1["default"], {
+      key: i,
+      menuTitle: menuTitle,
+      i: i,
+      handleVisibleChild: handleVisibleChild,
+      isVisibleChild: isVisibleChild,
+      indexChild: indexChild
+    });
+  })), react_1["default"].createElement("div", {
     className: "text-center"
   }, react_1["default"].createElement("button", {
     className: "bg-orange-400 w-3/5 rounded-md py-2 m-4 text-white"

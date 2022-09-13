@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { firstMenuDesc, firstMenuTitle } from "../../navData";
+import { firstMenuTitle } from "../../navData";
+import NavList from "./NavList";
 export default function MenuMobile() {
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
     const [isVisibleChild, setVisibleChild] = useState(false);
@@ -15,7 +16,6 @@ export default function MenuMobile() {
                 setOpenMenuMobile(false);
             }
         };
-
         useEffect(() => {
             document.addEventListener("click", handleClickOutside, true);
             return () => {
@@ -95,40 +95,17 @@ export default function MenuMobile() {
                         </div>
                         <ul>
                             {firstMenuTitle.map((menuTitle, i) => (
-                                <div
-                                    className="px-5 py-4 hover:bg-gray-600 cursor-pointer"
+                                <NavList
                                     key={i}
-                                >
-                                    <a href="">
-                                        <li className="flex justify-between">
-                                            {menuTitle}
-                                            <button
-                                                onClick={(e) =>
-                                                    handleVisibleChild(e, i)
-                                                }
-                                                className="bg-red-400 px-2"
-                                            >
-                                                +
-                                            </button>
-                                        </li>
-                                    </a>
-                                </div>
+                                    menuTitle={menuTitle}
+                                    i={i}
+                                    handleVisibleChild={handleVisibleChild}
+                                    isVisibleChild={isVisibleChild}
+                                    indexChild={indexChild}
+                                />
                             ))}
-                            {isVisibleChild
-                                ? firstMenuDesc[indexChild].map(
-                                      (menuDesc, i): any => (
-                                          <div
-                                              className="px-10 py-3 hover:bg-gray-600 cursor-pointer"
-                                              key={i}
-                                          >
-                                              <li className="" key={i}>
-                                                  {menuDesc.title}
-                                              </li>
-                                          </div>
-                                      )
-                                  )
-                                : ""}
                         </ul>
+
                         <div className="text-center">
                             <button className="bg-orange-400 w-3/5 rounded-md py-2 m-4 text-white">
                                 Contact
