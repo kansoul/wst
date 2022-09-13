@@ -3,9 +3,6 @@ import { firstMenuTitle } from "../../navData";
 import NavList from "./NavList";
 export default function MenuMobile() {
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
-    const [isVisibleChild, setVisibleChild] = useState(false);
-    const [indexChild, setIndexChild] = useState<number>(0);
-
     const useComponentVisible = (
         openMenuMobile: boolean,
         setOpenMenuMobile: (value: boolean) => void
@@ -25,13 +22,7 @@ export default function MenuMobile() {
         return { ref };
     };
     const { ref } = useComponentVisible(openMenuMobile, setOpenMenuMobile);
-    const handleVisibleChild = (event: any, i: number) => {
-        event.preventDefault();
-        console.log(i);
 
-        setVisibleChild(!isVisibleChild);
-        setIndexChild(i);
-    };
     return (
         <div className="basis-11/12 ">
             <button
@@ -95,14 +86,7 @@ export default function MenuMobile() {
                         </div>
                         <ul>
                             {firstMenuTitle.map((menuTitle, i) => (
-                                <NavList
-                                    key={i}
-                                    menuTitle={menuTitle}
-                                    i={i}
-                                    handleVisibleChild={handleVisibleChild}
-                                    isVisibleChild={isVisibleChild}
-                                    indexChild={indexChild}
-                                />
+                                <NavList key={i} menuTitle={menuTitle} i={i} />
                             ))}
                         </ul>
 

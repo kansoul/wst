@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { firstMenuDesc } from "../../navData";
 
 const NavList = (props: any) => {
-    const { i, menuTitle, handleVisibleChild, indexChild, isVisibleChild } =
-        props;
+    const { i, menuTitle } = props;
+    const [isVisibleChild, setVisibleChild] = useState(false);
+    const [indexChild, setIndexChild] = useState<number>(0);
+    const handleVisibleChild = (event: any, i: number) => {
+        event.preventDefault();
+        setVisibleChild(!isVisibleChild);
+        setIndexChild(i);
+    };
     return (
         <>
             <div className="px-5 py-4 hover:bg-gray-600 cursor-pointer">
