@@ -2388,7 +2388,7 @@ Object.defineProperty(exports, "__esModule", ({
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var navData_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../navData'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var navData_1 = __webpack_require__(/*! ../../../navData */ "./resources/js/components/app/container/Header/components/Navbar/navData.ts");
 
 var NavList = function NavList(props) {
   var titleIndex = props.titleIndex,

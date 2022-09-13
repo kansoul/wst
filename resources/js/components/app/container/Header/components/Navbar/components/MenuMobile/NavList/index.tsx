@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { firstMenuDesc } from "../../navData";
+import { firstMenuDesc } from "../../../navData";
 interface NavListProps {
     key: number;
     menuTitle: string;
