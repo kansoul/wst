@@ -1,12 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FirstMenu from "./components/FirstMenu";
-import SecondMenu from "./components/SecondMenu";
 import MenuMobile from "./components/MenuMobile";
+import SecondMenu from "./components/SecondMenu";
 
 export default function Navbars() {
     const [isMobileScreen, setMobileScreen] = useState(false);
-    const [openMenuMobile, setOpenMenuMobile] = useState(false);
     const [isOpenTop, setOpenTop] = useState(false);
     const [isOpenSecondMenu, setOpenSecondMenu] = useState(false);
 
@@ -32,31 +30,10 @@ export default function Navbars() {
 
     useEffect(() => {
         window.addEventListener("scroll", toggleVisibility);
-
         return () => {
             window.removeEventListener("scroll", toggleVisibility);
         };
     }, []);
-    const useComponentVisible = (
-        openMenuMobile: boolean,
-        setOpenMenuMobile: (value: boolean) => void
-    ) => {
-        const ref = useRef<any>(null);
-        const handleClickOutside = (event: any) => {
-            if (ref.current && !ref.current.contains(event.target)) {
-                setOpenMenuMobile(false);
-            }
-        };
-
-        useEffect(() => {
-            document.addEventListener("click", handleClickOutside, true);
-            return () => {
-                document.removeEventListener("click", handleClickOutside, true);
-            };
-        }, [openMenuMobile]);
-        return { ref };
-    };
-    const { ref } = useComponentVisible(openMenuMobile, setOpenMenuMobile);
     return (
         <div
             className={`py-2 px-[20px] lg:py-0 fixed top-0 items-center w-full divide-x-0 border-0 bg-white h-auto ${
@@ -115,60 +92,7 @@ export default function Navbars() {
                         <button className="btn-blue basis-2/12">Hehe</button>
                     </div>
                 ) : (
-                    <div className="basis-11/12 ">
-                        <button
-                            className="absolute right-[30px]"
-                            type="button"
-                            onClick={() => setOpenMenuMobile(true)}
-                        >
-                            {openMenuMobile ? (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    className="h-6 w-6"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                </svg>
-                            )}
-                        </button>
-                        <div
-                            className={`${
-                                openMenuMobile
-                                    ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]"
-                                    : ""
-                            }`}
-                        >
-                            <div
-                                ref={ref}
-                                className={`absolute top-0 transition-all ease-linear w-[70%] h-screen bg-red-500 right-[-100] z-50 ${
-                                    openMenuMobile
-                                        ? "right-0 duration-200"
-                                        : "hidden"
-                                }`}
-                            ></div>
-                        </div>
-                    </div>
+                    <MenuMobile />
                 )}
             </div>
         </div>
