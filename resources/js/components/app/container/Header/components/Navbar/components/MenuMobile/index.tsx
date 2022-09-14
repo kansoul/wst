@@ -70,7 +70,7 @@ export default function MenuMobile() {
             >
                 <div
                     ref={ref}
-                    className={`absolute top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ${
+                    className={`absolute overflow-y-auto top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ${
                         openMenuMobile ? "right-0 duration-200" : "hidden"
                     }`}
                 >

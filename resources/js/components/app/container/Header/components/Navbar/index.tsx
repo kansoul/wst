@@ -83,11 +83,131 @@ export default function Navbars() {
                                     isOpenSecondMenu={isOpenSecondMenu}
                                 />
                             </li>
-                            <li>Menu3</li>
-                            <li>Menu4</li>
-                            <li>Menu5</li>
-                            <li>Menu6</li>
-                            <li>Menu7</li>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu3</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu4</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu5</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu6</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu7</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
                         </ul>
                         <button className="btn-blue basis-2/12">Hehe</button>
                     </div>
