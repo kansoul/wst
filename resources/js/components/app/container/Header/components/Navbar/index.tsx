@@ -44,7 +44,7 @@ export default function Navbars() {
                 <h1 className="basis-1/12 bg-red-200 w-[120px]">LOGO</h1>
                 {isMobileScreen === false ? (
                     <div className="basis-11/12 bg-blue-300 flex w-[700px]">
-                        <ul className="basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900">
+                        <ul className="basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-row items-center gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900">
                             <li
                                 className="basis-[14%] h-full pt-[20px] cursor-pointer flex"
                                 onMouseEnter={() => setOpenTop(true)}
@@ -83,11 +83,131 @@ export default function Navbars() {
                                     isOpenSecondMenu={isOpenSecondMenu}
                                 />
                             </li>
-                            <li>Menu3</li>
-                            <li>Menu4</li>
-                            <li>Menu5</li>
-                            <li>Menu6</li>
-                            <li>Menu7</li>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu3</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu4</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu5</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu6</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="relative">
+                                <li className="peer hover:text-red-500 ">
+                                    <a href="">Menu7</a>
+                                </li>
+                                <div className="hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg">
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        About Us444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Contact Us4444444
+                                    </a>
+                                    <a
+                                        className="px-5 py-3 hover:bg-gray-200"
+                                        href="#"
+                                    >
+                                        Privacy Policy44444444
+                                    </a>
+                                </div>
+                            </div>
                         </ul>
                         <button className="btn-blue basis-2/12">Hehe</button>
                     </div>

@@ -2278,38 +2278,50 @@ function FirstMenu(props) {
       indexMenu = _ref2[0],
       setIndexMenu = _ref2[1];
 
+  var _ref3 = (0, react_1.useState)(0),
+      _ref4 = _slicedToArray(_ref3, 2),
+      isActive = _ref4[0],
+      setActive = _ref4[1];
+
   return react_1["default"].createElement("div", {
-    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible")
+    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear \n            ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible", "\n        ")
   }, react_1["default"].createElement("div", {
     className: "flex flex-col w-full rounded-lg absolute left-0 bg-yellow-100"
   }, react_1["default"].createElement("div", {
     className: "flex"
   }, react_1["default"].createElement("div", {
-    className: "block w-[40%] py-8 bg-gray-100"
-  }, navData_1.firstMenuTitle.map(function (menuTitle, i) {
+    className: "block w-[35%] py-8 bg-gray-100"
+  }, navData_1.firstMenuTitle.map(function (menuTitle, menuTitleIndex) {
     return react_1["default"].createElement("div", {
-      key: i,
-      className: "w-full py-4 px-[45px] text-xl  hover:bg-orange-200",
+      key: menuTitleIndex,
+      className: "w-full py-4 px-[45px] text-xl ".concat(isActive === menuTitleIndex && "bg-orange-200", " hover:bg-orange-200"),
       onMouseEnter: function onMouseEnter() {
-        return setIndexMenu(i);
+        setIndexMenu(menuTitleIndex);
+        setActive(menuTitleIndex);
       }
     }, react_1["default"].createElement("p", null, menuTitle));
   })), react_1["default"].createElement("div", {
-    className: "flex flex-wrap w-[60%] h-[500px] p-10"
+    className: "flex flex-col w-[65%] h-[500px] "
   }, react_1["default"].createElement("div", {
-    className: "w-full relative after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
-  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), react_1["default"].createElement("div", {
-    className: "flex flex-row flex-wrap  h-[500px]  py-10"
-  }, navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
+    onMouseEnter: function onMouseEnter() {
+      return setActive(indexMenu);
+    },
+    onMouseLeave: function onMouseLeave() {
+      return setActive(999);
+    },
+    className: "flex flex-wrap px-10 gap-y-2 "
+  }, react_1["default"].createElement("div", {
+    className: "w-full relative  mt-10 mb-6 after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
+  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
     return react_1["default"].createElement("div", {
-      className: "w-[50%] flex flex-auto",
+      className: " w-1/2 flex max-h-[80px]",
       key: i
     }, react_1["default"].createElement("img", {
       className: "w-4 h-4",
       src: menuDesc.img,
       alt: ""
     }), react_1["default"].createElement("div", {
-      className: "flex-col"
+      className: "flex-col w-full ml-1"
     }, react_1["default"].createElement("a", {
       className: "hover:text-orange-500",
       href: ""
@@ -2576,7 +2588,7 @@ function MenuMobile() {
     className: "".concat(openMenuMobile ? "absolute h-screen w-screen transition-all ease-linear right-0 left-0 top-0 bg-[rgba(0,0,0,.8)]" : "")
   }, react_1["default"].createElement("div", {
     ref: ref,
-    className: "absolute top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
+    className: "absolute overflow-y-auto top-0 transition-all ease-linear w-[70%] h-screen bg-gray-200 right-[-100] z-50 ".concat(openMenuMobile ? "right-0 duration-200" : "hidden")
   }, react_1["default"].createElement("div", {
     className: "w-full"
   }, react_1["default"].createElement("div", {
@@ -2686,6 +2698,11 @@ function SecondMenu(props) {
       indexMenu = _ref2[0],
       setIndexMenu = _ref2[1];
 
+  var _ref3 = (0, react_1.useState)(0),
+      _ref4 = _slicedToArray(_ref3, 2),
+      isActive = _ref4[0],
+      setActive = _ref4[1];
+
   return react_1["default"].createElement("div", {
     className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenSecondMenu ? "opacity-1 visible duration-300" : "opacity-0 invisible")
   }, react_1["default"].createElement("div", {
@@ -2693,31 +2710,38 @@ function SecondMenu(props) {
   }, react_1["default"].createElement("div", {
     className: "flex"
   }, react_1["default"].createElement("div", {
-    className: "block w-[40%] py-8 bg-gray-100"
-  }, navData_1.firstMenuTitle.map(function (menuTitle, i) {
+    className: "block w-[35%] py-8 bg-gray-100"
+  }, navData_1.firstMenuTitle.map(function (menuTitle, menuTitleIndex) {
     return react_1["default"].createElement("div", {
-      key: i,
-      className: "w-full py-4 px-[45px] text-xl  hover:bg-orange-200",
+      key: menuTitleIndex,
+      className: "w-full py-4 px-[45px] text-xl ".concat(isActive === menuTitleIndex && "bg-orange-200", " hover:bg-orange-200"),
       onMouseEnter: function onMouseEnter() {
-        return setIndexMenu(i);
+        setIndexMenu(menuTitleIndex);
+        setActive(menuTitleIndex);
       }
     }, react_1["default"].createElement("p", null, menuTitle));
   })), react_1["default"].createElement("div", {
-    className: "flex flex-wrap w-[60%] h-[500px] p-10"
+    className: "flex flex-col w-[65%] h-[500px] "
   }, react_1["default"].createElement("div", {
-    className: "w-full relative after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
-  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), react_1["default"].createElement("div", {
-    className: "flex flex-row flex-wrap  h-[500px]  py-10"
-  }, navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
+    onMouseEnter: function onMouseEnter() {
+      return setActive(indexMenu);
+    },
+    onMouseLeave: function onMouseLeave() {
+      return setActive(999);
+    },
+    className: "flex flex-wrap px-10 gap-y-2 "
+  }, react_1["default"].createElement("div", {
+    className: "w-full relative  mt-10 mb-6 after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
+  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
     return react_1["default"].createElement("div", {
-      className: "w-[50%] flex flex-auto",
+      className: " w-1/2 flex max-h-[80px]",
       key: i
     }, react_1["default"].createElement("img", {
       className: "w-4 h-4",
       src: menuDesc.img,
       alt: ""
     }), react_1["default"].createElement("div", {
-      className: "flex-col"
+      className: "flex-col w-full ml-1"
     }, react_1["default"].createElement("a", {
       className: "hover:text-orange-500",
       href: ""
@@ -2859,7 +2883,7 @@ function Navbars() {
   }, "LOGO"), isMobileScreen === false ? react_1["default"].createElement("div", {
     className: "basis-11/12 bg-blue-300 flex w-[700px]"
   }, react_1["default"].createElement("ul", {
-    className: "basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900"
+    className: "basis-10/12 h-[80px] mb-4 mt-2 p-2 mx-10 flex flex-row items-center gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-gray-900"
   }, react_1["default"].createElement("li", {
     className: "basis-[14%] h-full pt-[20px] cursor-pointer flex",
     onMouseEnter: function onMouseEnter() {
@@ -2896,7 +2920,92 @@ function Navbars() {
     d: "M11.973,18c-.704,0-1.378-.301-1.848-.824L1.729,8H22.216l-8.401,9.183c-.464,.517-1.138,.817-1.842,.817Z"
   })), react_1["default"].createElement(SecondMenu_1["default"], {
     isOpenSecondMenu: isOpenSecondMenu
-  })), react_1["default"].createElement("li", null, "Menu3"), react_1["default"].createElement("li", null, "Menu4"), react_1["default"].createElement("li", null, "Menu5"), react_1["default"].createElement("li", null, "Menu6"), react_1["default"].createElement("li", null, "Menu7")), react_1["default"].createElement("button", {
+  })), react_1["default"].createElement("div", {
+    className: "relative"
+  }, react_1["default"].createElement("li", {
+    className: "peer hover:text-red-500 "
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, "Menu3")), react_1["default"].createElement("div", {
+    className: "hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg"
+  }, react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "About Us"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Contact Us"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Privacy Policy"))), react_1["default"].createElement("div", {
+    className: "relative"
+  }, react_1["default"].createElement("li", {
+    className: "peer hover:text-red-500 "
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, "Menu4")), react_1["default"].createElement("div", {
+    className: "hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg"
+  }, react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "About Us444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Contact Us4444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Privacy Policy44444444"))), react_1["default"].createElement("div", {
+    className: "relative"
+  }, react_1["default"].createElement("li", {
+    className: "peer hover:text-red-500 "
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, "Menu5")), react_1["default"].createElement("div", {
+    className: "hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg"
+  }, react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "About Us444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Contact Us4444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Privacy Policy44444444"))), react_1["default"].createElement("div", {
+    className: "relative"
+  }, react_1["default"].createElement("li", {
+    className: "peer hover:text-red-500 "
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, "Menu6")), react_1["default"].createElement("div", {
+    className: "hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg"
+  }, react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "About Us444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Contact Us4444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Privacy Policy44444444"))), react_1["default"].createElement("div", {
+    className: "relative"
+  }, react_1["default"].createElement("li", {
+    className: "peer hover:text-red-500 "
+  }, react_1["default"].createElement("a", {
+    href: ""
+  }, "Menu7")), react_1["default"].createElement("div", {
+    className: "hidden top-10 absolute peer-hover:flex hover:flex  w-[200px] flex-col bg-white drop-shadow-lg"
+  }, react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "About Us444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Contact Us4444444"), react_1["default"].createElement("a", {
+    className: "px-5 py-3 hover:bg-gray-200",
+    href: "#"
+  }, "Privacy Policy44444444")))), react_1["default"].createElement("button", {
     className: "btn-blue basis-2/12"
   }, "Hehe")) : react_1["default"].createElement(MenuMobile_1["default"], null)));
 }
