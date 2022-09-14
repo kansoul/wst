@@ -2284,13 +2284,13 @@ function FirstMenu(props) {
       setActive = _ref4[1];
 
   return react_1["default"].createElement("div", {
-    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible")
+    className: "absolute left-0 right-0 top-[72px] bg-red-200 w-[1035px] m-auto z-1 transition-all ease-linear \n            ".concat(isOpenTop ? "opacity-1 visible" : "opacity-0 invisible", "\n        ")
   }, react_1["default"].createElement("div", {
     className: "flex flex-col w-full rounded-lg absolute left-0 bg-yellow-100"
   }, react_1["default"].createElement("div", {
     className: "flex"
   }, react_1["default"].createElement("div", {
-    className: "block w-[40%] py-8 bg-gray-100"
+    className: "block w-[35%] py-8 bg-gray-100"
   }, navData_1.firstMenuTitle.map(function (menuTitle, menuTitleIndex) {
     return react_1["default"].createElement("div", {
       key: menuTitleIndex,
@@ -2301,27 +2301,27 @@ function FirstMenu(props) {
       }
     }, react_1["default"].createElement("p", null, menuTitle));
   })), react_1["default"].createElement("div", {
-    className: "flex flex-wrap w-[60%] h-[500px] p-10"
+    className: "flex flex-col w-[65%] h-[500px] "
   }, react_1["default"].createElement("div", {
-    className: "w-full relative after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
-  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), react_1["default"].createElement("div", {
     onMouseEnter: function onMouseEnter() {
       return setActive(indexMenu);
     },
     onMouseLeave: function onMouseLeave() {
       return setActive(999);
     },
-    className: "flex flex-row flex-wrap  h-[500px]  py-10"
-  }, navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
+    className: "flex flex-wrap px-10 gap-y-2 "
+  }, react_1["default"].createElement("div", {
+    className: "w-full relative  mt-10 mb-6 after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
+  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
     return react_1["default"].createElement("div", {
-      className: "w-[50%] flex flex-auto",
+      className: " w-1/2 flex max-h-[80px]",
       key: i
     }, react_1["default"].createElement("img", {
       className: "w-4 h-4",
       src: menuDesc.img,
       alt: ""
     }), react_1["default"].createElement("div", {
-      className: "flex-col"
+      className: "flex-col w-full ml-1"
     }, react_1["default"].createElement("a", {
       className: "hover:text-orange-500",
       href: ""
@@ -2710,7 +2710,7 @@ function SecondMenu(props) {
   }, react_1["default"].createElement("div", {
     className: "flex"
   }, react_1["default"].createElement("div", {
-    className: "block w-[40%] py-8 bg-gray-100"
+    className: "block w-[35%] py-8 bg-gray-100"
   }, navData_1.firstMenuTitle.map(function (menuTitle, menuTitleIndex) {
     return react_1["default"].createElement("div", {
       key: menuTitleIndex,
@@ -2721,27 +2721,27 @@ function SecondMenu(props) {
       }
     }, react_1["default"].createElement("p", null, menuTitle));
   })), react_1["default"].createElement("div", {
-    className: "flex flex-wrap w-[60%] h-[500px] p-10"
+    className: "flex flex-col w-[65%] h-[500px] "
   }, react_1["default"].createElement("div", {
-    className: "w-full relative after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
-  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), react_1["default"].createElement("div", {
     onMouseEnter: function onMouseEnter() {
       return setActive(indexMenu);
     },
     onMouseLeave: function onMouseLeave() {
       return setActive(999);
     },
-    className: "flex flex-row flex-wrap  h-[500px]  py-10"
-  }, navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
+    className: "flex flex-wrap px-10 gap-y-2 "
+  }, react_1["default"].createElement("div", {
+    className: "w-full relative  mt-10 mb-6 after:absolute after:bg-yellow-400 after:w-full after:h-[2px]"
+  }, react_1["default"].createElement("h2", null, "Dich vu va giai phap toan dien")), navData_1.firstMenuDesc[indexMenu].map(function (menuDesc, i) {
     return react_1["default"].createElement("div", {
-      className: "w-[50%] flex flex-auto",
+      className: " w-1/2 flex max-h-[80px]",
       key: i
     }, react_1["default"].createElement("img", {
       className: "w-4 h-4",
       src: menuDesc.img,
       alt: ""
     }), react_1["default"].createElement("div", {
-      className: "flex-col"
+      className: "flex-col w-full ml-1"
     }, react_1["default"].createElement("a", {
       className: "hover:text-orange-500",
       href: ""

@@ -16,7 +16,7 @@ export default function SecondMenu(props: { isOpenSecondMenu: boolean }) {
         >
             <div className="flex flex-col w-full rounded-lg absolute left-0 bg-yellow-100">
                 <div className="flex">
-                    <div className="block w-[40%] py-8 bg-gray-100">
+                    <div className="block w-[35%] py-8 bg-gray-100">
                         {firstMenuTitle.map(
                             (menuTitle, menuTitleIndex): any => (
                                 <div
@@ -35,19 +35,19 @@ export default function SecondMenu(props: { isOpenSecondMenu: boolean }) {
                             )
                         )}
                     </div>
-                    <div className="flex flex-wrap w-[60%] h-[500px] p-10">
-                        <div className="w-full relative after:absolute after:bg-yellow-400 after:w-full after:h-[2px]">
-                            <h2>Dich vu va giai phap toan dien</h2>
-                        </div>
+                    <div className="flex flex-col w-[65%] h-[500px] ">
                         <div
                             onMouseEnter={() => setActive(indexMenu)}
                             onMouseLeave={() => setActive(999)}
-                            className="flex flex-row flex-wrap  h-[500px]  py-10"
+                            className="flex flex-wrap px-10 gap-y-2 "
                         >
+                            <div className="w-full relative  mt-10 mb-6 after:absolute after:bg-yellow-400 after:w-full after:h-[2px]">
+                                <h2>Dich vu va giai phap toan dien</h2>
+                            </div>
                             {firstMenuDesc[indexMenu].map(
                                 (menuDesc, i): any => (
                                     <div
-                                        className="w-[50%] flex flex-auto"
+                                        className=" w-1/2 flex max-h-[80px]"
                                         key={i}
                                     >
                                         <img
@@ -55,7 +55,7 @@ export default function SecondMenu(props: { isOpenSecondMenu: boolean }) {
                                             src={menuDesc.img}
                                             alt=""
                                         />
-                                        <div className="flex-col">
+                                        <div className="flex-col w-full ml-1">
                                             <a
                                                 className="hover:text-orange-500"
                                                 href=""
